@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luc Dodge Terra</title>
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://dodgeterra.com/" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <style>
+    :root {
+      --bg: #0b1020; --text: #e5e7eb; --muted: #a3a7b7; --card:#111834; --border:#1f2a4a; --brand:#60a5fa;
+    }
+    @media (prefers-color-scheme: light){:root{--bg:#f8fafc;--text:#0f172a;--muted:#475569;--card:#ffffff;--border:#e2e8f0;--brand:#2563eb}}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg);line-height:1.6}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto;border-radius:12px}
+    .container{width:min(1000px,92%);margin:0 auto}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:var(--brand);color:#fff;padding:.5rem .75rem;border-radius:.5rem}
+
+    header{position:sticky;top:0;z-index:40;background:rgba(0,0,0,.2);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .brand{font-weight:800}
+    nav a{margin-left:1rem;color:inherit;opacity:.9} nav a:hover{opacity:1}
+
+    .hero{padding:3.5rem 0 2rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .title{font-size:clamp(2rem,3.5vw+1rem,3rem);line-height:1.1;margin:.4rem 0 1rem;font-weight:900}
+    .subtitle{color:var(--muted);margin:0}
+    .cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.2rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.68rem 1rem;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font-weight:700}
+
+    section{padding:2rem 0;border-top:1px solid var(--border)}
+    .section-title{font-size:1.35rem;font-weight:800;letter-spacing:-.01em;margin:.2rem 0 1rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .card{grid-column:span 6;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
+    @media(max-width:900px){.card{grid-column:span 12}}
+    .list{list-style:none;padding:0;margin:0}
+
+    footer{padding:2rem 0 3rem;color:var(--muted);border-top:1px solid var(--border)}
+    .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header aria-label="Site header">
+    <div class="container nav">
+      <div class="brand">Your Name</div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- HERO: Replace placeholders. Keep structure. -->
+    <section class="hero" aria-label="Intro">
+      <div>
+        <h1 class="title">Luc Dodge Terra</h1>
+        <p class="subtitle"><!-- Optional one‑line tagline. Example: Economist & Public Policy. --></p>
+        <div class="cta">
+          <a class="btn" href="/assets/CV.pdf" target="_blank" rel="noopener">View CV</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <!-- Headshot (optional). Save as /assets/headshot.jpg -->
+        <img src="/assets/headshot.jpg" alt="Headshot" />
+      </div>
+    </section>
+
+    <!-- ABOUT: Keep to a short paragraph you control. -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About</h2>
+      <p><!-- Write your bio here. Keep 80–160 words. --></p>
+      <ul class="list"><!-- Optional bullet points (skills, tools, interests). --></ul>
+    </section>
+
+    <!-- PUBLICATIONS: Cards or simple list. -->
+    <section id="publications" aria-labelledby="pubs-title">
+      <h2 class="section-title" id="pubs-title">Publications & Writing</h2>
+      <div class="grid">
+        <!-- Example card structure; duplicate as needed. -->
+        <article class="card">
+          <h3><!-- Title --></h3>
+          <p><!-- One‑sentence summary (optional). --></p>
+          <p><a href="#"><!-- Link to paper/post --></a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS: Cards with demo/repo links. -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3><!-- Project title --></h3>
+          <p><!-- Short description. --></p>
+          <p><a href="#">Demo</a> · <a href="#">Repo</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TEACHING: Simple list is fine. -->
+    <section id="teaching" aria-labelledby="teaching-title">
+      <h2 class="section-title" id="teaching-title">Teaching</h2>
+      <ul class="list">
+        <li><!-- Course / role / term --></li>
+      </ul>
+    </section>
+
+    <!-- CONTACT: One obvious action. -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <p><a class="btn" href="mailto:hello@dodgeterra.com">Email</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span>Luc Dodge Terra</div>
+      <div><!-- Optional: small note or links (robots.txt / humans.txt). --></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
