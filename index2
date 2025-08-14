@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luc Dodge Terra</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+            color: #2c2c2c;
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin: 0 0.5rem;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Luc Dodge Terra</h1>
+        <p>Exploring arts and science with curiosity and care.</p>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#writing">Writing</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            I’m interested in the conversations between arts and science — how ideas cross disciplines, how creativity fuels discovery, and how analysis can deepen beauty.
+            This is a space where I collect thoughts, essays, and projects that reflect that interplay.
+        </p>
+    </section>
+
+    <section id="writing">
+        <h2>Writing</h2>
+        <p><strong>Arts:</strong> Reflections on literature, music, visual arts, and philosophy.</p>
+        <p><strong>Science:</strong> Notes on mathematics, physics, economics, and technology.</p>
+        <p>
+            <em>Coming soon:</em> Essays on topics ranging from the structure of a fugue to the structure of a proof.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>
+            Selected works and collaborations will appear here, from analytical models to creative compositions.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            You can reach me at <a href="mailto:contact@dodgeterra.com">contact@dodgeterra.com</a>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Luc Dodge Terra — All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
