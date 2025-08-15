@@ -33,9 +33,25 @@ body{
 .brand p{color:var(--muted); font-size:1.05rem; margin:0}
 
 /* Theme toggle button */
-.theme-toggle{margin-left:auto; border:1px solid var(--line); background:transparent; color:var(--ink);
-  border-radius:999px; padding:0.35rem 0.65rem; cursor:pointer; font-size:0.95rem}
-.theme-toggle:hover{background:var(--bg)}
+.theme-toggle {
+  margin-left: auto;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  width: 2em;         /* Ensures consistent width */
+  height: 2em;        /* Ensures consistent height */
+  font-family: inherit; /* Or 'monospace' for even width icons */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle:hover {
+  background: var(--bg);
+}
 
 /* Nav: understated */
 .nav{display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; padding:0 0 1rem}
