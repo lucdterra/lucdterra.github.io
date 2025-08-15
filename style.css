@@ -39,15 +39,16 @@ body{
   background: transparent;
   color: var(--ink);
   border-radius: 999px;
-  padding: 0.35rem 0.65rem;
   cursor: pointer;
-  font-size: 0.95rem;
-  width: 2em;         /* Ensures consistent width */
-  height: 2em;        /* Ensures consistent height */
-  font-family: inherit; /* Or 'monospace' for even width icons */
-  display: inline-flex;
+  font-size: 1.2rem;  /* Slightly bigger for visibility */
+  width: 2.5em;        /* Fixed width */
+  height: 2.5em;       /* Fixed height */
+  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;          /* Remove extra padding */
+  box-sizing: border-box;
+  transition: background 0.2s;
 }
 .theme-toggle:hover {
   background: var(--bg);
