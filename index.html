@@ -7,20 +7,29 @@
   <title>Luc Dodge Terra</title>
   <link rel="stylesheet" href="/style.css"/>
   <script>
-    // Theme bootstrap: honour user preference and system setting
-    (function(){
-      try{
-        var saved = localStorage.getItem('theme');
-        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.dataset.theme = theme;
-      }catch(e){}
-    })();
-    function toggleTheme(){
-      var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-      document.documentElement.dataset.theme = next;
-      try{ localStorage.setItem('theme', next); }catch(e){}
-    }
-  </script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    }catch(e){}
+  })();
+
+  function updateThemeToggleIcon() {
+    var btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+    btn.textContent = document.documentElement.dataset.theme === 'dark' ? '☀' : '☾';
+  }
+
+  function toggleTheme(){
+    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try{ localStorage.setItem('theme', next); }catch(e){}
+    updateThemeToggleIcon();
+  }
+
+  document.addEventListener('DOMContentLoaded', updateThemeToggleIcon);
+</script>
 </head>
 <body>
   <header class="site-header">
@@ -28,15 +37,14 @@
       <h1><a href="/" style="text-decoration:none; color:inherit">Luc Dodge Terra</a></h1>
       <p>“I'm smart enough to know that I am dumb.”</p>
       <p>- Richard Feynman</p>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☾</button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
     </div>
     <nav class="container nav">
       <a href="/" class="active">Home</a>
-      <a href="/consuming">Consuming</a>
-      <a href="/investing">Investing</a>
-      <a href="/producing">Producing</a>
+      <a href="/consumption">Consumption</a>
+      <a href="/investment">Investment</a>
+      <a href="/producing">Production</a>
       <a href="/about">About</a>
-      <a href="/contact">Contact</a>
     </nav>
   </header>
 
