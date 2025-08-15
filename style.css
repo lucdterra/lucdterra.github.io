@@ -68,6 +68,9 @@ h3{font-size:1.1rem; margin:1.25rem 0 0.5rem}
 /* Text */
 p{margin:0 0 1.1rem}
 small, .muted{color:var(--muted)}
+.centered-text {
+  text-align: center;
+}
 
 /* Lists */
 ul,ol{margin:0 0 1.1rem 1.25rem}
