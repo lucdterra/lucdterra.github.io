@@ -1,0 +1,84 @@
+/* Typography & layout: serif body, generous margins, calm palette */
+:root{
+  --bg: #faf9f7;
+  --ink: #222222;
+  --muted: #5c5c5c;
+  --line: #e6e2dc;
+  --accent: #3b5bdb;   /* subtle blue for links */
+  --card: #ffffff;      /* surfaces (header, cards) */
+}
+
+/* Dark theme variables */
+:root[data-theme="dark"]{
+  --bg: #0f1115;
+  --ink: #e8e8e8;
+  --muted: #a5aab3;
+  --line: #2a2f3a;
+  --accent: #7aa2ff;
+  --card: #161a20;
+}
+
+*{box-sizing:border-box}
+html{font-size:16px}
+body{
+  margin:0; padding:0; background:var(--bg); color:var(--ink);
+  font-family: Georgia, "Times New Roman", serif; line-height:1.75;
+}
+.container{max-width:780px; margin:0 auto; padding:2.25rem 1.25rem}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--line); background:var(--card)}
+.brand{display:flex; flex-direction:column; align-items:center; text-align:center; padding:2rem 1rem}
+.brand h1{font-size:1.9rem; letter-spacing:0.2px; margin:0.2rem 0 0.4rem}
+.brand p{color:var(--muted); font-size:1.05rem; margin:0}
+
+/* Theme toggle button */
+.theme-toggle{margin-left:auto; border:1px solid var(--line); background:transparent; color:var(--ink);
+  border-radius:999px; padding:0.35rem 0.65rem; cursor:pointer; font-size:0.95rem}
+.theme-toggle:hover{background:var(--bg)}
+
+/* Nav: understated */
+.nav{display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; padding:0 0 1rem}
+.nav a{color:var(--muted); text-decoration:none; padding:0.25rem 0.4rem; border-radius:6px}
+.nav a:hover{color:var(--ink); text-decoration:underline}
+.nav .active{color:var(--ink); font-weight:600}
+
+/* Headlines */
+h1,h2,h3{font-family: Georgia, "Times New Roman", serif; font-weight:700; line-height:1.35}
+h2{font-size:1.35rem; margin:2rem 0 0.75rem; padding-bottom:0.25rem; border-bottom:1px solid var(--line)}
+h3{font-size:1.1rem; margin:1.25rem 0 0.5rem}
+
+/* Text */
+p{margin:0 0 1.1rem}
+small, .muted{color:var(--muted)}
+
+/* Lists */
+ul,ol{margin:0 0 1.1rem 1.25rem}
+li{margin:0.25rem 0}
+
+/* Links */
+a{color:var(--accent)}
+a:hover{opacity:0.9}
+
+/* Cards (for lists of posts/projects) */
+.card{padding:1rem 0; border-bottom:1px solid var(--line); background:transparent}
+.card:last-child{border-bottom:none}
+.card a.title{color:var(--ink); text-decoration:none}
+.card a.title:hover{text-decoration:underline}
+.card .meta{color:var(--muted); font-size:0.95rem}
+
+/* Pull quotes / blockquotes */
+blockquote{border-left:3px solid var(--line); margin:1rem 0; padding:0.5rem 1rem; color:var(--ink); background:transparent}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--line); color:var(--muted); background:var(--card)}
+.site-footer p{margin:0.5rem 0}
+
+/* Utility */
+.hr{border-top:1px solid var(--line); margin:1.5rem 0}
+.lead{font-size:1.1rem; color:var(--ink)}
+
+/* Responsive tweak */
+@media (min-width: 900px){
+  .brand h1{font-size:2.1rem}
+}
