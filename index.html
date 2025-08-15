@@ -1,123 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luc Dodge Terra</title>
-    <style>
-        /* General reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            background-color: #fdfdfd;
-            color: #2c2c2c;
-            max-width: 800px;
-            margin: auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        header h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        nav {
-            margin-top: 1rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #555;
-            margin: 0 0.5rem;
-        }
-
-        nav a:hover {
-            color: #000;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 0.3rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #777;
-            margin-top: 3rem;
-        }
-    </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="The personal site of Luc Dodge Terra—essays at the intersection of arts and science."/>
+  <title>Luc Dodge Terra</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <script>
+    // Theme bootstrap: honour user preference and system setting
+    (function(){
+      try{
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      }catch(e){}
+    })();
+    function toggleTheme(){
+      var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try{ localStorage.setItem('theme', next); }catch(e){}
+    }
+  </script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container brand" style="position:relative">
+      <h1><a href="/" style="text-decoration:none; color:inherit">Luc Dodge Terra</a></h1>
+      <p>Exploring arts and science with curiosity and care.</p>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☾</button>
+    </div>
+    <nav class="container nav">
+      <a href="/" class="active">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/reading.html">Reading</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <header>
-        <h1>Luc Dodge Terra</h1>
-        <p>Exploring arts and science with curiosity and care.</p>
-        <nav>
-            <a href="#about">About</a> |
-            <a href="#writing">Writing</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <main class="container">
+    <p class="lead">Welcome. This site collects essays, notes, and projects on arts and science. It grows slowly and quietly.</p>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>
-            I’m interested in the conversations between arts and science — how ideas cross disciplines, how creativity fuels discovery, and how analysis can deepen beauty.
-            This is a space where I collect thoughts, essays, and projects that reflect that interplay.
-        </p>
-    </section>
+    <h2>Recent writing</h2>
+    <div id="recent-posts"></div>
 
-    <section id="writing">
-        <h2>Writing</h2>
-        <p><strong>Arts:</strong> Reflections on literature, music, visual arts, and philosophy.</p>
-        <p><strong>Science:</strong> Notes on mathematics, physics, economics, and technology.</p>
-        <p>
-            <em>Coming soon:</em> Essays on topics ranging from the structure of a fugue to the structure of a proof.
-        </p>
-    </section>
+    <div class="hr"></div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>
-            Selected works and collaborations will appear here, from analytical models to creative compositions.
-        </p>
-    </section>
+    <h2>Projects</h2>
+    <div class="card">
+      <a class="title" href="#">[Project name]</a>
+      <div class="meta">Brief line about what it is.</div>
+    </div>
+  </main>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            You can reach me at <a href="mailto:contact@dodgeterra.com">contact@dodgeterra.com</a>.
-        </p>
-    </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Luc Dodge Terra · <span class="muted">All rights reserved.</span></p>
+    </div>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Luc Dodge Terra — All rights reserved.</p>
-    </footer>
-
+  <script>
+    // Load most recent few posts for the homepage
+    fetch('/posts/index.json')
+      .then(r=>r.json())
+      .then(posts=>{
+        var el = document.getElementById('recent-posts');
+        posts.sort((a,b)=> (b.date||'').localeCompare(a.date));
+        posts.slice(0,3).forEach(function(p){
+          var d = document.createElement('div'); d.className='card';
+          d.innerHTML = `<a class="title" href="${p.url}">${p.title}</a>
+            <div class="meta">${p.category} · <time datetime="${p.date}">${new Date(p.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</time></div>
+            <p>${p.summary||''}</p>`;
+          el.appendChild(d);
+        });
+      })
+      .catch(function(){ document.getElementById('recent-posts').innerHTML = '<p class="muted">Add posts to <code>/posts</code> to see them here.</p>';});
+  </script>
 </body>
 </html>
