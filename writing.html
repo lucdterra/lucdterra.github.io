@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Writing — Luc Dodge Terra</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <script>(function(){try{var s=localStorage.getItem('theme');var t=s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){}})();function toggleTheme(){var n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;try{localStorage.setItem('theme',n);}catch(e){}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container brand" style="position:relative">
+      <h1><a href="/" style="text-decoration:none; color:inherit">Luc Dodge Terra</a></h1>
+      <p>Exploring arts and science with curiosity and care.</p>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☾</button>
+    </div>
+    <nav class="container nav">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/writing.html" class="active">Writing</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/reading.html">Reading</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Writing</h2>
+    <p class="muted">Posts from <code>/posts</code>. Edit <code>/posts/index.json</code> to add new ones.</p>
+    <div id="posts"></div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>&copy; 2025 Luc Dodge Terra</p></div></footer>
+
+  <script>
+    // Render all posts from /posts/index.json
+    fetch('/posts/index.json')
+      .then(r=>r.json())
+      .then(posts=>{
+        var el = document.getElementById('posts');
+        posts.sort((a,b)=> (b.date||'').localeCompare(a.date));
+        posts.forEach(function(p){
+          var d = document.createElement('div'); d.className='card';
+          d.innerHTML = `<a class="title" href="${p.url}">${p.title}</a>
+            <div class="meta">${p.category} · <time datetime="${p.date}">${new Date(p.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</time></div>
+            <p>${p.summary||''}</p>`;
+          el.appendChild(d);
+        });
+      })
+      .catch(function(){ document.getElementById('posts').innerHTML='<p class="muted">No posts yet. Add files to <code>/posts</code> and list them in <code>/posts/index.json</code>.</p>'; });
+  </script>
+</body>
+</html>
