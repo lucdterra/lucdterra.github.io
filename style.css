@@ -22,7 +22,7 @@
 html{font-size:16px}
 body{
   margin:0; padding:0; background:var(--bg); color:var(--ink);
-  font-family: Georgia, "Times New Roman", serif; line-height:1.75;
+  font-family: Garamond, "EB Garamond", Georgia, serif; line-height:1.75;
 }
 .container{max-width:780px; margin:0 auto; padding:2.25rem 1.25rem}
 
