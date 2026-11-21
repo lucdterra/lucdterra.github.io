@@ -1,87 +1,22 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="The personal site of Luc Dodge Terra—essays at the intersection of arts and science."/>
-  <title>Luc Dodge Terra</title>
-  <link rel="stylesheet" href="/style.css"/>
-  <script>
-  (function(){
-    try{
-      var saved = localStorage.getItem('theme');
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.dataset.theme = theme;
-    }catch(e){}
-  })();
-
-  function updateThemeToggleIcon() {
-    var btn = document.querySelector('.theme-toggle');
-    if (!btn) return;
-    btn.textContent = document.documentElement.dataset.theme === 'dark' ? '☀' : '☾';
-  }
-
-  function toggleTheme(){
-    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    try{ localStorage.setItem('theme', next); }catch(e){}
-    updateThemeToggleIcon();
-  }
-
-  document.addEventListener('DOMContentLoaded', updateThemeToggleIcon);
-</script>
+  <title>Welcome to my website!</title>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container brand" style="position:relative">
-      <h1><a href="/" style="text-decoration:none; color:inherit">Luc Dodge Terra</a></h1>
-      <p>“But the soup is getting cold.”</p>
-      <p>- Leonardo da Vinci</p>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
-    </div>
-    <nav class="container nav">
-      <a href="/" class="active">Home</a>
-      <a href="/about">About</a>
-      <a href="/consumption">Consumption</a>
-      <a href="/investment">Investment</a>
-      <a href="/production">Production</a>
-    </nav>
-  </header>
+  <body>
+    <h1>
+      About me.
+    </h1>
+    <p>
+      Who am I? What do I want? My CV and my contacts.... BEHHHHHHH
 
-  <main class="container">
-    <h2>Recent writing</h2>
-    <div id="recent-posts"></div>
+Have a fully honest about section.
 
-    <div class="hr"></div>
+You are a captialist communist who hates everyone and everything but tries his best to love everyone and everything. You are making this website in case people want to look you up and because you don't like LinkedIn. You have obssessed about every inch of this and would like people to belive you haven't.
 
-    <h2>Projects</h2>
-    <div class="card">
-      <a class="title" href="#">[Project name]</a>
-      <div class="meta">Brief line about what it is.</div>
-    </div>
-  </main>
+You want to make the world a better place because you are selfish and believe this world is yours. You love econ but believe that if you were smarter you would have been a mathematician or physicist. You are a tall white guy who believes that he is not like the other tall white guys.
 
-  <footer class="site-footer">
-    <div class="container">
-    </div>
-  </footer>
-
-  <script>
-    // Load most recent few posts for the homepage
-    fetch('/posts/index.json')
-      .then(r=>r.json())
-      .then(posts=>{
-        var el = document.getElementById('recent-posts');
-        posts.sort((a,b)=> (b.date||'').localeCompare(a.date));
-        posts.slice(0,3).forEach(function(p){
-          var d = document.createElement('div'); d.className='card';
-          d.innerHTML = `<a class="title" href="${p.url}">${p.title}</a>
-            <div class="meta">${p.category} · <time datetime="${p.date}">${new Date(p.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})}</time></div>
-            <p>${p.summary||''}</p>`;
-          el.appendChild(d);
-        });
-      })
-      .catch(function(){ document.getElementById('recent-posts').innerHTML = '<p class="muted">Add posts to <code>/posts</code> to see them here.</p>';});
-  </script>
-</body>
+You are trying to manipulate those reading this into thinking that you are their friend when you have no friends. You are scared of dying but trying not to be.
+    </p>
+  </body>
 </html>
