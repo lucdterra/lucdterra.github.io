@@ -2,4 +2,4 @@
 
 This is a trial...
 
-$ e = mc^2 $
+$e = mc^2$
