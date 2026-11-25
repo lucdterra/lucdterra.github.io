@@ -12,6 +12,8 @@ It seems as though land is what is ultimately necessarily for something to be pr
 
 Say you want to get sand out of a beach. 
 Well then the first thing you need ,_by definition_, is a beach, preferably I guess one that has sand.
+Hmm, I guess in this case the _definition_ is the end product you are trying to get to, in this case _beach sand_.
+Then I think all the individual grains of sand would be all the _examples_ of such definition.
 
 However if you were to try to do this by hand, good luck!
 You might spend a whole life time and not get enough for whatever job you are trying to accomplish.
@@ -31,6 +33,9 @@ Wait, I'm getting off topic.
 You are the mover, the labourer. 
 You are trying to get sand from the beach, to say, a warehouse.
 You like moving things but you need help and something to move.
+
+If I were to continue with the math analogy here, labour is _exercise_.
+Then, performing labour is solving an exercise.
 
 
 
