@@ -4,9 +4,9 @@ title: (1776) Wealth of Nations, Smith
 
 # Wealth of Nations
 
-## Book 1: Causes and Order of Production
+## Book 1: On the Causes and Distribution of Production
 
-### Chapter 6:
+### Chapter 6: On the Component Parts of the Price of Commodities
 
 It seems as though land is what is ultimately necessarily for something to be produced, or better, "transformed", extracted or my favourite, **moved**.
 
