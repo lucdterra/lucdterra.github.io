@@ -55,3 +55,19 @@ Wait, this is also true of the least advanced, such as paying someone for a mass
 Here smith clearly seems to say that land is paid out first, then labour and profit is what is leftover.
 
 _"But the whole price of any commodity must still finally resolve itself into some one or other or all of those three parts; as whatever part of it remains after paying the rent of the land, and the price of the whole labour employed in raising, manufacturing, and bringing it to market, must necessarily be profit to somebody."_
+
+
+### Chapter 7: On the Natural and Market Price of Commodities.
+Here Smith essentially outlines the modern basic versions of the Supply and Demand curves for any one commodity.
+He outlines that a good can stay profitable, that is, with excess demand for a while, but never have excess supply.
+The manner in which this is done is either by some trade secrets or monopoly, both of which artificially lower the supply to the market.
+The trade secrets by finding a cheaper way than the average and the monopoly by producing at the profit maximizing price.
+
+The opposite cannot happen because if a good is producing losses, it will just stop being produced as much.
+In this case, it is because the supplier controls the quantity, not demand. 
+Demand is essentially out of control.
+
+
+## Book 2: Of the Nature, Accumulation, and Employment of Stock.
+### Introduction
+Smith's main idea here is that in order to grow, you must first have.
