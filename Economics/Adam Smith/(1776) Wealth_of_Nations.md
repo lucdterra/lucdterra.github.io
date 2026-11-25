@@ -8,6 +8,8 @@ title: (1776) Wealth of Nations, Smith
 
 ### Chapter 6: On the Component Parts of the Price of Commodities
 
+##### First Part: Dividing the Commodity into Land, Labour and Capital
+
 It seems as though land is what is ultimately necessarily for something to be produced, or better, "transformed", extracted or my favourite, **moved**.
 
 Say you want to get sand out of a beach. 
@@ -40,4 +42,12 @@ If I were to continue with the math analogy here, labour is _exercise_.
 Then, performing labour is solving an exercise.
 
 
+##### Second Part: How the division changes.
+It seems as though in the most primitive of societies, the commodity is entirely dependant on the land.
+You might think of extracting like operations, e.g. exporting timber from a rainforest.
+To perform such operation one would need land (the rainforest), capital (the axe, trucks, etc.), and labour (the lumberjack, driver, etc.).
 
+Then, as society progresses, an operation might only require capital and labour.
+Smith gives the example of a fishery, where one pays the fisherman and the costs of the boat.
+
+Lastly, in the most advanced form of society, or operation, it is entirely dependant on labour.
