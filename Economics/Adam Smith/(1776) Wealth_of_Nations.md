@@ -14,6 +14,8 @@ Say you want to get sand out of a beach.
 Well then the first thing you need ,_by definition_, is a beach, preferably I guess one that has sand.
 Hmm, I guess in this case the _definition_ is the end product you are trying to get to, in this case _beach sand_.
 Then I think all the individual grains of sand would be all the _examples_ of such definition.
+Hmm, but then, obviously, all the grains of sand on the beach don't make up the beach. 
+Somehow beach sand is a definition contained inside a larger definition.
 
 However if you were to try to do this by hand, good luck!
 You might spend a whole life time and not get enough for whatever job you are trying to accomplish.
