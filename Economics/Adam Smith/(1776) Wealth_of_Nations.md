@@ -9,7 +9,6 @@ title: (1776) Wealth of Nations, Smith
 ### Chapter 6: On the Component Parts of the Price of Commodities
 
 #### First Part: Dividing the Commodity into Land, Labour and Capital
-
 It seems as though land is what is ultimately necessarily for something to be produced, or better, "transformed", extracted or my favourite, **moved**.
 
 Say you want to get sand out of a beach. 
